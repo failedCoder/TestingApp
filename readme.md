@@ -9,7 +9,7 @@
   <li>Tests are automatically graded and the result is displayed on screen after finishing</li>
 </ul>
 
-<br>
+<hr>
 
 <p>Solving the test:</p>
 <img src="https://image.ibb.co/b8iuyy/testing_App1.png" alt="testing_App1" align="center">
