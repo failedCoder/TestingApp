@@ -1,4 +1,4 @@
-<h1 align="center">Add to Cart </h1>
+<h1 align="center">Testing App</h1>
 <p align="center">App for creating and taking tests with multiple choice questions.</p>
 
 ## Features:
