@@ -3,7 +3,7 @@
 
 ## Features:
 
-<ul>
+<ul align="center">
   <li>User authentification and authorization</li>
   <li>Registred users can create,edit and delete tests,questions and answers</li>
   <li>Tests are automatically graded and the result is displayed on screen after finishing</li>
