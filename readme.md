@@ -13,10 +13,10 @@
 
 <p>Solving the test:</p>
 <img src="https://image.ibb.co/b8iuyy/testing_App1.png" alt="testing_App1" align="center">
-<br>
+<hr>
 <p>Result displayed:</p>
 <img src="https://image.ibb.co/h9WEyy/result.png" alt="result" align="center">
-<br>
+<hr>
 <p>List of test created by authorized user:</p>
 <ul>
   <li>User can create new test,or edit and delete existing tests.</li>
@@ -30,13 +30,13 @@
   <li>Users can add new answers for the questions by pressing the answers button.</li> 
 </ul>
 <img src="https://image.ibb.co/ibqwBJ/testing_App3.png" alt="testing_App3" align="center">
-<br>
+<hr>
 <p>List of answers for specific question:</p>
 <ul>
   <li>User can create new answers for specific question,or edit and delete existing answers.</li> 
 </ul>
 <img src="https://image.ibb.co/jHvk5d/testing_App4.png" alt="testing_App4" align="center">
-<br>
+<hr>
 <p>Edit form for an answer:</p>
 <img src="https://image.ibb.co/caiGBJ/testing_App5.png" alt="testing_App5" align="center">
 
