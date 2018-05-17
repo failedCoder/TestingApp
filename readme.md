@@ -11,7 +11,7 @@
 
 <hr>
 
-<p>Solving the test:</p>
+<p>Taking the test:</p>
 <img src="https://image.ibb.co/b8iuyy/testing_App1.png" alt="testing_App1" align="center">
 <hr>
 <p>Result displayed:</p>
