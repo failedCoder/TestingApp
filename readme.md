@@ -17,7 +17,7 @@
 <p>Result displayed:</p>
 <img src="https://image.ibb.co/h9WEyy/result.png" alt="result" align="center">
 <hr>
-<p>List of test created by authorized user:</p>
+<p>List of tests created by authorized user:</p>
 <ul>
   <li>User can create new test,or edit and delete existing tests.</li>
   <li>Users can add new questions for test by pressing the ? button.</li> 
