@@ -3,7 +3,28 @@
 @section('content')
 
 	<br>
+
+	@if ($flash=session('message'))
+		<div class="container">
+			<div class="alert alert-success" role="alert" id = "Delete">
+			    {{ $flash }}
+			</div>
+		</div>
+
+		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+		<script type="text/javascript">
+		$("#Delete").fadeOut(4000)
+		</script>    
+	@endif
+
 <div class="container">
+	<div class="row">
+		<div class="my-auto ml-auto">
+			<a href="/questions/{{$question->test->id}}">
+				<i class="fas fa-arrow-circle-left fa-2x"></i>
+			</a>
+		</div>
+	</div>
 	<div class="row">
 		<div class="col-md-8 offset-md-2 d-flex justify-content-center">
 			<h1>{{ $questionText }}</h1>

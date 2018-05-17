@@ -17,11 +17,17 @@ class TestController extends Controller
 
     public function store(){
 
+      $this->validate(request(),[
+            'duration'=> 'integer|required',
+         ]);
+
       Test::create([
          "name" => request('name'),
          'duration' => request('duration'),
          "user_id" => Auth::id(),
       ]);
+
+      session()->flash('message','New test created!');
 
       return redirect('profile');
     }
@@ -33,6 +39,10 @@ class TestController extends Controller
    }
 
    public function update(Test $test){
+
+      $this->validate(request(),[
+         'duration' => 'integer|required',
+      ]);
 
       $test->name = request('name');
       $test->duration = request('duration');
@@ -61,4 +71,28 @@ class TestController extends Controller
    		
       return view('show',compact('test'));
    	}
+
+      public function grade(Test $test){
+
+         $this->validate(request(),[
+            'answers'=> 'required'
+         ]);
+
+         $selectedAnswers = request('answers');
+         $correctCount = 0;
+
+         foreach($selectedAnswers as $questionId => $answers):
+               $question = $test->questions->find($questionId);
+               $correctAnswers = $question->answers->where('is_correct','1')->pluck('id')->toArray();
+               
+               if (count($answers) === count($correctAnswers)):
+                  if (!array_diff($answers, $correctAnswers)) {
+                     $correctCount++;
+                  }
+               endif;
+         endforeach;
+
+         return view('result',compact('correctCount','test'));
+        
+      }
 }

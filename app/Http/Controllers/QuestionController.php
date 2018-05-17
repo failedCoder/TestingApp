@@ -35,6 +35,8 @@ public function index($testId){
     		'test_id' => $test->id,
     	]);
 
+        session()->flash('message','New question created!');
+
     	return redirect("/questions/$test->id");
     }
 

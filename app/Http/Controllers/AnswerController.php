@@ -28,11 +28,17 @@ class AnswerController extends Controller
 
     public function store($question){
 
+        $this->validate(request(),[
+            'correct' => 'required',
+        ]);
+
     	Answer::create([
     		'body' => request('body'),
     		'is_correct' => request('correct'),
     		'question_id' => $question,
     	]);
+
+        session()->flash('message','New answer created!');
 
     	return redirect("/answers/$question");
     }
@@ -54,6 +60,8 @@ class AnswerController extends Controller
     	$answer->save();
 
     	$id = $answer->question->id;
+
+        session()->flash('message','Answer edited!');
 
     	return redirect("answers/$id");
     }

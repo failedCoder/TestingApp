@@ -3,6 +3,15 @@
 @section('content')
 
 <br>
+@if ($errors->any())
+    <div class="container alert alert-danger">
+        
+            @foreach ($errors->all() as $error)
+                <p class="text-center">{{ $error }}</p>
+            @endforeach
+        
+    </div>
+@endif
 <div class="container">
 	<div class="row">
 		<div class="col-md-8 offset-md-2 d-flex justify-content-center">
