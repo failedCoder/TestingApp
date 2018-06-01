@@ -7,6 +7,7 @@
   <li>User authentication and authorization</li>
   <li>Registered users can create,edit and delete tests,questions and answers</li>
   <li>Tests are automatically graded and the result is displayed on screen after finishing</li>
+  <li>Javascript timer that automatically submits the test form when the time runs out.</li>
 </ul>
 
 <hr>
