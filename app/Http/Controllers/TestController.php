@@ -74,25 +74,26 @@ class TestController extends Controller
 
       public function grade(Test $test){
 
-         $this->validate(request(),[
-            'answers'=> 'required'
-         ]);
-
-         $selectedAnswers = request('answers');
          $correctCount = 0;
 
-         foreach($selectedAnswers as $questionId => $answers):
-               $question = $test->questions->find($questionId);
-               $correctAnswers = $question->answers->where('is_correct','1')->pluck('id')->toArray();
-               
-               if (count($answers) === count($correctAnswers)):
-                  if (!array_diff($answers, $correctAnswers)) {
-                     $correctCount++;
-                  }
-               endif;
-         endforeach;
+         if($selectedAnswers = request('answers')){
+            
 
+            foreach($selectedAnswers as $questionId => $answers):
+                  $question = $test->questions->find($questionId);
+                  $correctAnswers = $question->answers->where('is_correct','1')->pluck('id')->toArray();
+                  
+                  if (count($answers) === count($correctAnswers)):
+                     if (!array_diff($answers, $correctAnswers)) {
+                        $correctCount++;
+                     }
+                  endif;
+            endforeach;
+
+            
+         }
+            
          return view('result',compact('correctCount','test'));
-        
+         
       }
 }

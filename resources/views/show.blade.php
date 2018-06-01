@@ -22,7 +22,8 @@
 			</div>
 
 			<div class="ml-auto my-auto">
-				<p class="">Time left: {{ $test->duration }}</p>
+				<input type="hidden" value="{{ $test->duration }}" id="duration">
+				<p>Time left: <span id="time"></span></p>
 			</div>
 			
 		</div>
@@ -32,7 +33,7 @@
 	<hr>
 
 	<div class="container col-10 offset-1">
-		<form action="/result/{{ $test->id }}" method="post">
+		<form action="/result/{{ $test->id }}" method="post" id="form" name="theForm">
 			@csrf
 			@foreach($test->questions as $question)
 			<div class="row">
@@ -52,10 +53,10 @@
 			<br>
 			@endforeach
 			<br><br>
-			<button type="submit" class="btn btn-danger" name="submit">Submit</button>
+			<button type="submit" class="btn btn-danger" name="sub">Submit</button>
 		</form>
 	</div>
 
-
+	<script type="text/javascript" src="/js/timer.js"></script>
 
 @endsection

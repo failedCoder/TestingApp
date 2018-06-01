@@ -78,7 +78,7 @@ $("#Delete").fadeOut(4000)
 				</div>
 				</div>
 		</div>
-
+		<br>
 	@endforeach
 	
 	
